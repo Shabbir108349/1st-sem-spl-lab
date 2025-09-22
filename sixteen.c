@@ -6,20 +6,18 @@ int main(){
     char s[50];
     printf("Enter the String: ");
     gets(s);
-    char temps[50];
-    strcpy(temps,s);
-    char finalS[50];
-    int j=0;
-    while()
-    for(int i=length-1; i>=0; i--){
-        finalS[j] = temps[i];
-        j++; 
+    
+    int start = 0;
+    int end = strlen(s)-1;
+    while(start < end){
+        if(s[start] != s[end]){
+            printf("The String is not a palindrome");
+            return 0;
+        }
+        start++;
+        end--;
     }
-    if(strcmp(finalS,s)==0){
-        printf("The String is a palindrome");
-    }else{
-        printf("The String is not a palindrome");
-    }
+    printf("The String is a palindrome");
 
     return 0;
 }
